@@ -23,15 +23,42 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.0.0</version>
+							 
+				
+				
+				
 			</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				
+	<configuration>
+				 
+     <cloudHubDeployment>
+      <uri>https://anypoint.mulesoft.com</uri>
+      <muleVersion>4.4.0</muleVersion>
+      <username>madatmule</username>
+      <password>Madhuri@Mutton1</password>
+      <applicationName>indigo</applicationName>
+      <environment>Sandbox</environment>
+      <workers>1</workers>
+      <workerType>MICRO</workerType>
+      <objectStoreV2>true</objectStoreV2>  
+   </cloudHubDeployment>
+   
+  
+				
+				
+				
+					<classifier>mule-application</classifier>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+	
+	
 
 	<dependencies>
 		<dependency>
